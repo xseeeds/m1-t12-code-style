@@ -6,6 +6,7 @@ public class DepositCalculate {
         return getRound(pay, 2);
     } // возможно имеет смысл сделать отступ перед объявлением месяца
 // Каким еще месяцем ткни пальцем))))
+    // метода!
 
     double CalculateSimplePercent(double doubleAmount, double doubleYearRate, int depositPeriod) {
         return getRound(doubleAmount + doubleAmount * doubleYearRate * depositPeriod, 2);
