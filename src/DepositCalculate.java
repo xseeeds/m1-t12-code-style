@@ -17,6 +17,7 @@ public class DepositCalculate {
 
     void TheSurvey() {
         int period, action, amount; // ты забыл, что каждое поле нужно объявлять отдельно
+        // привык к такому когда изучал с++
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Введите сумму вклада в рублях:");
