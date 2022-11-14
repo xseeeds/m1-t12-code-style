@@ -5,6 +5,7 @@ public class DepositCalculate {
         double pay = deposit * Math.pow((1 + percent / 12), 12 * depositPeriod);
         return getRound(pay, 2);
     } // возможно имеет смысл сделать отступ перед объявлением месяца
+// Каким еще месяцем ткни пальцем))))
 
     double CalculateSimplePercent(double doubleAmount, double doubleYearRate, int depositPeriod) {
         return getRound(doubleAmount + doubleAmount * doubleYearRate * depositPeriod, 2);
