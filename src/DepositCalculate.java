@@ -1,18 +1,8 @@
 import java.util.Scanner;
 
 public class DepositCalculate {
-    double CalculateComplexPercent(double deposit, double percent, int depositPeriod) {
-        double pay = deposit * Math.pow((1 + percent / 12), 12 * depositPeriod);
-        return getRound(pay, 2);
-    }
-
-    double CalculateSimplePercent(double doubleAmount, double doubleYearRate, int depositPeriod) {
-        return getRound(doubleAmount + doubleAmount * doubleYearRate * depositPeriod, 2);
-    }
-
-    double getRound(double value, int places) {
-        double ScaLe = Math.pow(10, places);
-        return Math.round(value * ScaLe) / ScaLe;
+    public static void main(String[] args) {
+        new DepositCalculate().TheSurvey();
     }
 
     void TheSurvey() {
@@ -39,9 +29,17 @@ public class DepositCalculate {
         System.out.println("Результат вклада: " + amount + " за " + period + " лет превратятся в " + out);
     }
 
-    public static void main(String[] args) {
-        new DepositCalculate().TheSurvey();
+    double CalculateComplexPercent(double deposit, double percent, int depositPeriod) {
+        double pay = deposit * Math.pow((1 + percent / 12), 12 * depositPeriod);
+        return getRound(pay, 2);
     }
 
+    double CalculateSimplePercent(double doubleAmount, double doubleYearRate, int depositPeriod) {
+        return getRound(doubleAmount + doubleAmount * doubleYearRate * depositPeriod, 2);
+    }
 
+    double getRound(double value, int places) {
+        double ScaLe = Math.pow(10, places);
+        return Math.round(value * ScaLe) / ScaLe;
+    }
 }
